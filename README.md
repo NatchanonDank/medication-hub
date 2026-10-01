@@ -1,32 +1,36 @@
-# React + TypeScript + Vite
+# MedHub - Modern Decoupled SPA Medication Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Mini Project สำหรับรายวิชาพัฒนาเว็บแอปพลิเคชัน โดยใช้สถาปัตยกรรม Modern Decoupled Single Page Application (SPA)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 👥 Team Members (ผู้จัดทำ)
+* **นายณัฐชนน ด่านกิจยิ่งยง (เอฟ)** - รหัสนักศึกษา: `1650701343` (พัฒนาแอปพลิเคชันทั้งหมด: Frontend, Routing, State Management, UI/UX)
+* **นายณัฏฐภพ สมิทธิธนันต์ (เต้)** - รหัสนักศึกษา: `1660701648` (จัดทำเอกสารประกอบโครงงาน / Documentation)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Tech Stack (เทคโนโลยีที่ใช้)
+* **Framework:** React + Vite (TypeScript)
+* **Styling & UI:** Tailwind CSS, DaisyUI (Dark Theme Aesthetic)
+* **Routing:** React Router v7
+* **Server State Management:** TanStack Query (กำหนด StaleTime 5 นาที พร้อมระบบ Caching)
+* **Client State Management:** Zustand (พร้อมใช้ `persist` middleware บันทึกข้อมูลกระเป๋ายาลง LocalStorage)
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 📌 Features & Pages (ฟีเจอร์และหน้าหลักของแอปพลิเคชัน)
+1. **Medication List Page (หน้าหลัก):** แสดงรายการยาทั้งหมด 48 ชนิด พร้อมระบบค้นหา (Search), ตัวกรองเฉพาะยาในกระเป๋า (My Kit Toggle) และระบบ Loading Skeleton
+2. **Medication Detail Page (หน้ารายละเอียด):** แสดงข้อมูลเชิงลึกของยาแต่ละชนิด รูปภาพประกอบ และกล่องข้อความ "ข้อมูลเพิ่มเติม" (Collapse/Accordion)
+3. **My Medical Kit Page (หน้ากระเป๋ายาส่วนตัว):** จัดการรายการยาที่ผู้ใช้เลือกเก็บไว้ในคอลเลกชันส่วนตัว ข้อมูลถูกบันทึกไว้อย่างถาวรผ่าน Zustand Persist
+4. **Drug Interaction Checker Page (หน้าตรวจสอบปฏิกิริยาระหว่างยา):** ระบบจำลองการเลือกยา 2 ชนิดเพื่อวิเคราะห์และแจ้งเตือนความเสี่ยง (ระดับปลอดภัย เฝ้าระวัง และอันตรายรุนแรง)
+5. **About Page (หน้าเกี่ยวกับเรา):** แสดงข้อมูลรายชื่อผู้จัดทำ รหัสนักศึกษา หน้าที่รับผิดชอบ และเครดิตแหล่งที่มาของข้อมูล (Data Attribution)
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+---
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 🛠️ Getting Started (วิธีรันโปรเจกต์ในเครื่อง)
+
+1. **Clone Repository**
+   ```bash
+   git clone <URL_ของ_REPO>
+   cd medication-hub
