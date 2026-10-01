@@ -1,0 +1,386 @@
+[
+  {
+    "id": "1",
+    "name": "Sertraline",
+    "category": "Psychiatric",
+    "use": "Depression, Anxiety & OCD",
+    "description": "ยารักษาอาการซึมเศร้า วิตกกังวล และย้ำคิดย้ำทำ",
+    "imageUrl": "/images/sertraline.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Ibuprofen",
+    "category": "NSAID",
+    "use": "Pain, Fever & Inflammation",
+    "description": "ยาแก้ปวด ลดไข้ และต้านการอักเสบ",
+    "imageUrl": "/images/ibuprofen.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Warfarin",
+    "category": "Cardiovascular",
+    "use": "Blood Clot Prevention (Monitor INR)",
+    "description": "ยาป้องกันการแข็งตัวของเลือด (ต้องติดตามค่า INR)",
+    "imageUrl": "/images/warfarin.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Furosemide",
+    "category": "Diuretic",
+    "use": "Edema & Fluid Overload",
+    "description": "ยาขับปัสสาวะ ลดอาการบวมน้ำและน้ำท่วมปอด",
+    "imageUrl": "/images/furosemide.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Albuterol",
+    "category": "Respiratory",
+    "use": "Asthma Rescue (Bronchodilator)",
+    "description": "ยาขยายหลอดลม บรรเทาอาการหอบหืดเฉียบพลัน",
+    "imageUrl": "/images/albuterol.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Prednisone",
+    "category": "Corticosteroid",
+    "use": "Inflammation & Autoimmune Flares",
+    "description": "ยาสเตียรอยด์ ลดการอักเสบและกดภูมิคุ้มกัน",
+    "imageUrl": "/images/prednisone.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Metoprolol",
+    "category": "Cardiovascular",
+    "use": "Heart Rate & Blood Pressure",
+    "description": "ยาลดความดันโลหิตและควบคุมอัตราการเต้นของหัวใจ",
+    "imageUrl": "/images/metoprolol.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Gabapentin",
+    "category": "Neurological",
+    "use": "Nerve Pain & Seizures",
+    "description": "ยารักษาอาการปวดเส้นประสาทและโรคลมชัก",
+    "imageUrl": "/images/gabapentin.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Amoxicillin",
+    "category": "Antibiotic",
+    "use": "Bacterial Infections (Wide Range)",
+    "description": "ยาปฏิชีวนะ รักษาการติดเชื้อแบคทีเรียหลายชนิด",
+    "imageUrl": "/images/amoxicillin.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Atorvastatin",
+    "category": "Cardiovascular",
+    "use": "Cholesterol Lowering (Lipitor)",
+    "description": "ยาลดคอเลสเตอรอลและไขมันในเลือด",
+    "imageUrl": "/images/atorvastatin.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Amlodipine",
+    "category": "Cardiovascular",
+    "use": "High Blood Pressure (Calcium Blocker)",
+    "description": "ยาลดความดันโลหิตสูง (กลุ่มบล็อกแคลเซียม)",
+    "imageUrl": "/images/amlodipine.jpg"
+  },
+  {
+    "id": "12",
+    "name": "Hydrochlorothiazide",
+    "category": "Diuretic",
+    "use": "Diuretic (Water Pill) & High BP",
+    "description": "ยาขับปัสสาวะและลดความดันโลหิต",
+    "imageUrl": "/images/hydrochlorothiazide.jpg"
+  },
+  {
+    "id": "13",
+    "name": "Naproxen",
+    "category": "NSAID",
+    "use": "Arthritis & Muscle Pain Relief",
+    "description": "ยาบรรเทาอาการปวดข้อและกล้ามเนื้ออักเสบ",
+    "imageUrl": "/images/naproxen.jpg"
+  },
+  {
+    "id": "14",
+    "name": "Escitalopram",
+    "category": "Psychiatric",
+    "use": "Depression & Anxiety (SSRI)",
+    "description": "ยารักษาโรคซึมเศร้าและวิตกกังวล (กลุ่ม SSRI)",
+    "imageUrl": "/images/escitalopram.jpg"
+  },
+  {
+    "id": "15",
+    "name": "Famotidine",
+    "category": "Gastrointestinal",
+    "use": "Acid Reflux & Ulcer Prevention",
+    "description": "ยาลดกรด รักษาแผลในกระเพาะและกรดไหลย้อน",
+    "imageUrl": "/images/famotidine.jpg"
+  },
+  {
+    "id": "16",
+    "name": "Apixaban",
+    "category": "Cardiovascular",
+    "use": "Stroke & Blood Clot Prevention",
+    "description": "ยาป้องกันการเกิดลิ่มเลือดและโรคหลอดเลือดสมอง",
+    "imageUrl": "/images/apixaban.jpg"
+  },
+  {
+    "id": "17",
+    "name": "Sumatriptan",
+    "category": "Neurological",
+    "use": "Migraine & Headache Relief",
+    "description": "ยาบรรเทาอาการปวดหัวไมเกรน",
+    "imageUrl": "/images/sumatriptan.jpg"
+  },
+  {
+    "id": "18",
+    "name": "Allopurinol",
+    "category": "Musculoskeletal",
+    "use": "Gout & Uric Acid Control",
+    "description": "ยาควบคุมกรดยูริกและรักษาโรคเกาต์",
+    "imageUrl": "/images/allopurinol.jpg"
+  },
+  {
+    "id": "19",
+    "name": "Valsartan",
+    "category": "Cardiovascular",
+    "use": "Heart Failure & High Blood Pressure",
+    "description": "ยารักษาภาวะหัวใจล้มเหลวและความดันโลหิตสูง",
+    "imageUrl": "/images/valsartan.jpg"
+  },
+  {
+    "id": "20",
+    "name": "Fluconazole",
+    "category": "Antifungal",
+    "use": "Fungal Infections (Yeast & Skin)",
+    "description": "ยารักษาการติดเชื้อเชื้อราที่ผิวหนังและช่องคลอด",
+    "imageUrl": "/images/fluconazole.jpg"
+  },
+  {
+    "id": "21",
+    "name": "Metformin",
+    "category": "Endocrine",
+    "use": "Type 2 Diabetes (First Line)",
+    "description": "ยารักษาเบาหวานชนิดที่ 2 (ยาตัวแรกที่แนะนำ)",
+    "imageUrl": "/images/metformin.jpg"
+  },
+  {
+    "id": "22",
+    "name": "Omeprazole",
+    "category": "Gastrointestinal",
+    "use": "Acid Reflux & Stomach Ulcers",
+    "description": "ยาลดการหลั่งกรด รักษาแผลในกระเพาะและกรดไหลย้อน",
+    "imageUrl": "/images/omeprazole.jpg"
+  },
+  {
+    "id": "23",
+    "name": "Levothyroxine",
+    "category": "Endocrine",
+    "use": "Hypothyroidism Replacement",
+    "description": "ฮอร์โมนทดแทนสำหรับผู้ที่มีภาวะไทรอยด์ทำงานต่ำ",
+    "imageUrl": "/images/levothyroxine.jpg"
+  },
+  {
+    "id": "24",
+    "name": "Lisinopril",
+    "category": "Cardiovascular",
+    "use": "High Blood Pressure (ACE Inhibitor)",
+    "description": "ยาลดความดันโลหิตสูง (กลุ่มยับยั้งเอนไซม์ ACE)",
+    "imageUrl": "/images/lisinopril.jpg"
+  },
+  {
+    "id": "25",
+    "name": "Ondansetron",
+    "category": "Gastrointestinal",
+    "use": "Nausea & Vomiting Control",
+    "description": "ยาควบคุมและบรรเทาอาการคลื่นไส้อาเจียน",
+    "imageUrl": "/images/ondansetron.jpg"
+  },
+  {
+    "id": "26",
+    "name": "Ciprofloxacin",
+    "category": "Antibiotic",
+    "use": "UTI & Bacterial Infections",
+    "description": "ยาปฏิชีวนะ รักษากระเพาะปัสสาวะอักเสบและติดเชื้อ",
+    "imageUrl": "/images/ciprofloxacin.jpg"
+  },
+  {
+    "id": "27",
+    "name": "Clopidogrel",
+    "category": "Cardiovascular",
+    "use": "Stroke & Heart Attack Prevention",
+    "description": "ยาต้านเกล็ดเลือด ป้องกันโรคหลอดเลือดสมองและหัวใจวาย",
+    "imageUrl": "/images/clopidogrel.jpg"
+  },
+  {
+    "id": "28",
+    "name": "Losartan",
+    "category": "Cardiovascular",
+    "use": "Blood Pressure & Kidney Protection",
+    "description": "ยาลดความดันโลหิตและช่วยชะลอความเสื่อมของไต",
+    "imageUrl": "/images/losartan.jpg"
+  },
+  {
+    "id": "29",
+    "name": "Azithromycin",
+    "category": "Antibiotic",
+    "use": "Respiratory Tract Infections",
+    "description": "ยาปฏิชีวนะ รักษาการติดเชื้อในระบบทางเดินหายใจ",
+    "imageUrl": "/images/azithromycin.jpg"
+  },
+  {
+    "id": "30",
+    "name": "Insulin Glargine",
+    "category": "Endocrine",
+    "use": "Long Acting Basal Insulin",
+    "description": "อินซูลินออกฤทธิ์ยาว ควบคุมน้ำตาลในเลือดพื้นฐาน",
+    "imageUrl": "/images/insulin_glargine.jpg"
+  },
+  {
+    "id": "31",
+    "name": "Montelukast",
+    "category": "Respiratory",
+    "use": "Asthma & Allergic Rhinitis",
+    "description": "ยาควบคุมอาการหอบหืดและภูมิแพ้อากาศ",
+    "imageUrl": "/images/montelukast.jpg"
+  },
+  {
+    "id": "32",
+    "name": "Pantoprazole",
+    "category": "Gastrointestinal",
+    "use": "Acid Reflux & Esophagitis",
+    "description": "ยาลดกรด รักษาหลอดอาหารอักเสบและกรดไหลย้อน",
+    "imageUrl": "/images/pantoprazole.jpg"
+  },
+  {
+    "id": "33",
+    "name": "Amitriptyline",
+    "category": "Psychiatric",
+    "use": "Nerve Pain & Sleep Support",
+    "description": "ยารักษาอาการปวดปลายประสาทและช่วยให้นอนหลับ",
+    "imageUrl": "/images/amitriptyline.jpg"
+  },
+  {
+    "id": "34",
+    "name": "Carvedilol",
+    "category": "Cardiovascular",
+    "use": "Heart Failure (Beta Blocker)",
+    "description": "ยารักษาหัวใจล้มเหลว (กลุ่มเบต้าบล็อกเกอร์)",
+    "imageUrl": "/images/carvedilol.jpg"
+  },
+  {
+    "id": "35",
+    "name": "Digoxin",
+    "category": "Cardiovascular",
+    "use": "Heart Failure & Atrial Fibrillation",
+    "description": "ยารักษาภาวะหัวใจล้มเหลวและหัวใจเต้นผิดจังหวะ",
+    "imageUrl": "/images/digoxin.jpg"
+  },
+  {
+    "id": "36",
+    "name": "Methotrexate",
+    "category": "Immunosuppressant",
+    "use": "Rheumatoid Arthritis",
+    "description": "ยากดภูมิคุ้มกัน รักษาโรครูมาตอยด์อักเสบ",
+    "imageUrl": "/images/methotrexate.jpg"
+  },
+  {
+    "id": "37",
+    "name": "Tamsulosin",
+    "category": "Urological",
+    "use": "Enlarged Prostate & Urine Flow",
+    "description": "ยารักษาต่อมลูกหมากโตและช่วยเรื่องการปัสสาวะ",
+    "imageUrl": "/images/tamsulosin.jpg"
+  },
+  {
+    "id": "38",
+    "name": "Enoxaparin",
+    "category": "Cardiovascular",
+    "use": "DVT Prevention (Injection)",
+    "description": "ยาฉีดต้านการแข็งตัวของเลือด ป้องกันหลอดเลือดดำอุดตัน",
+    "imageUrl": "/images/enoxaparin.jpg"
+  },
+  {
+    "id": "39",
+    "name": "Naloxone",
+    "category": "Antidote",
+    "use": "Opioid Overdose Reversal",
+    "description": "ยาต้านพิษ ใช้แก้ภาวะได้รับยาแก้ปวดกลุ่มโอปิออยด์เกินขนาด",
+    "imageUrl": "/images/naloxone.jpg"
+  },
+  {
+    "id": "40",
+    "name": "Epinephrine",
+    "category": "Emergency",
+    "use": "Anaphylaxis Emergency",
+    "description": "ยาฉีดฉุกเฉินสำหรับอาการแพ้รุนแรงเฉียบพลัน",
+    "imageUrl": "/images/epinephrine.jpg"
+  },
+  {
+    "id": "41",
+    "name": "Tramadol",
+    "category": "Analgesic",
+    "use": "Moderate to Severe Pain",
+    "description": "ยาแก้ปวดระดับปานกลางถึงรุนแรง",
+    "imageUrl": "/images/tramadol.jpg"
+  },
+  {
+    "id": "42",
+    "name": "Alprazolam",
+    "category": "Psychiatric",
+    "use": "Anxiety & Panic Disorder",
+    "description": "ยาคลายกังวล รักษาโรควิตกกังวลและแพนิค",
+    "imageUrl": "/images/alprazolam.jpg"
+  },
+  {
+    "id": "43",
+    "name": "Spironolactone",
+    "category": "Diuretic",
+    "use": "Heart Failure & Edema",
+    "description": "ยาขับปัสสาวะแบบสงวนโพแทสเซียม ลดบวมและรักษาหัวใจล้มเหลว",
+    "imageUrl": "/images/spironolactone.jpg"
+  },
+  {
+    "id": "44",
+    "name": "Rosuvastatin",
+    "category": "Cardiovascular",
+    "use": "High Cholesterol Control",
+    "description": "ยาควบคุมและลดระดับคอเลสเตอรอลในเลือดสูง",
+    "imageUrl": "/images/rosuvastatin.jpg"
+  },
+  {
+    "id": "45",
+    "name": "Aspirin",
+    "category": "Cardiovascular",
+    "use": "Heart Attack & Stroke Prevention",
+    "description": "ยาต้านเกล็ดเลือด ป้องกันกล้ามเนื้อหัวใจขาดเลือดและหลอดเลือดสมอง",
+    "imageUrl": "/images/aspirin.jpg"
+  },
+  {
+    "id": "46",
+    "name": "Atenolol",
+    "category": "Cardiovascular",
+    "use": "High Blood Pressure (Beta Blocker)",
+    "description": "ยาลดความดันโลหิต (กลุ่มเบต้าบล็อกเกอร์)",
+    "imageUrl": "/images/atenolol.jpg"
+  },
+  {
+    "id": "47",
+    "name": "Doxycycline",
+    "category": "Antibiotic",
+    "use": "Acne & Bacterial Infections",
+    "description": "ยาปฏิชีวนะ รักษาสิวอักเสบและการติดเชื้อแบคทีเรีย",
+    "imageUrl": "/images/doxycycline.jpg"
+  },
+  {
+    "id": "48",
+    "name": "Cetirizine",
+    "category": "Antihistamine",
+    "use": "Allergy & Hay Fever Relief",
+    "description": "ยาแก้แพ้ บรรเทาอาการภูมิแพ้และลมพิษ",
+    "imageUrl": "/images/cetirizine.jpg"
+  }
+]
