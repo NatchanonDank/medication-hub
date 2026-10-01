@@ -4,383 +4,383 @@
     "name": "Sertraline",
     "category": "Psychiatric",
     "use": "Depression, Anxiety & OCD",
-    "description": "ยารักษาอาการซึมเศร้า วิตกกังวล และย้ำคิดย้ำทำ",
-    "imageUrl": "/images/sertraline.jpg"
+    "description": "ยาต้านเศร้ากลุ่ม SSRI (Selective Serotonin Reuptake Inhibitor) ออกฤทธิ์เพิ่มระดับสารสื่อประสาทเซโรโทนินในสมอง ใช้รักษาโรคซึมเศร้า วิตกกังวลทั่วไป และโรคย้ำคิดย้ำทำ (OCD) ข้อควรระวังคือห้ามหยุดยาเองทันทีและอาจมีอาการคลื่นไส้ในช่วงแรกของการใช้ยา",
+    "imageUrl": "/images/sertraline.png"
   },
   {
     "id": "2",
     "name": "Ibuprofen",
     "category": "NSAID",
     "use": "Pain, Fever & Inflammation",
-    "description": "ยาแก้ปวด ลดไข้ และต้านการอักเสบ",
-    "imageUrl": "/images/ibuprofen.jpg"
+    "description": "ยาต้านการอักเสบชนิดไม่ใช่สเตียรอยด์ (NSAIDs) ออกฤทธิ์ยับยั้งเอนไซม์ COX ลดการสร้างสารพروสตาแกลนดิน ช่วยบรรเทาอาการปวด ลดไข้ และลดการอักเสบ เช่น ปวดข้อ ปวดศีรษะ ควรรับประทานหลังอาหารทันทีเพื่อป้องกันการระคายเคืองกระเพาะอาหาร",
+    "imageUrl": "/images/ibuprofen.png"
   },
   {
     "id": "3",
     "name": "Warfarin",
     "category": "Cardiovascular",
     "use": "Blood Clot Prevention (Monitor INR)",
-    "description": "ยาป้องกันการแข็งตัวของเลือด (ต้องติดตามค่า INR)",
-    "imageUrl": "/images/warfarin.jpg"
+    "description": "ยาต้านการแข็งตัวของเลือด (Anticoagulant) ออกฤทธิ์ต้านวิตามินเค ป้องกันการเกิดลิ่มเลือดอุดตันในหลอดเลือดและหัวใจ ผู้ป่วยต้องได้รับการเจาะเลือดตรวจค่า INR อย่างสม่ำเสมอเพื่อปรับขนาดยาให้อยู่ในเกณฑ์ที่ปลอดภัย เพราะหากยาเกินขนาดอาจทำให้เลือดออกง่ายผิดปกติ",
+    "imageUrl": "/images/warfarin.png"
   },
   {
     "id": "4",
     "name": "Furosemide",
     "category": "Diuretic",
     "use": "Edema & Fluid Overload",
-    "description": "ยาขับปัสสาวะ ลดอาการบวมน้ำและน้ำท่วมปอด",
-    "imageUrl": "/images/furosemide.jpg"
+    "description": "ยาขับปัสสาวะทรงประสิทธิภาพ (Loop Diuretic) ออกฤทธิ์ที่หน่วยไตส่วน Henle's loop ขับเกลือแร่และน้ำส่วนเกินออกจากร่างกาย ใช้รักษาอาการบวมน้ำจากภาวะหัวใจล้มเหลว โรคตับ หรือโรคไต ควรระวังภาวะโพแทสเซียมในเลือดต่ำ",
+    "imageUrl": "/images/furosemide.png"
   },
   {
     "id": "5",
     "name": "Albuterol",
     "category": "Respiratory",
     "use": "Asthma Rescue (Bronchodilator)",
-    "description": "ยาขยายหลอดลม บรรเทาอาการหอบหืดเฉียบพลัน",
-    "imageUrl": "/images/albuterol.jpg"
+    "description": "ยาขยายหลอดลมกลุ่ม Beta-2 adrenergic agonist ชนิดสูดพ่น ออกฤทธิ์เร็วเพื่อคลายกล้ามเนื้อรอบหลอดลม ใช้ระงับอาการหอบหืดเฉียบพลันหรือป้องกันอาการหอบจากการออกกำลังกาย อาจมีอาการใจสั่นหรือมือสั่นเล็กน้อยหลังใช้ยา",
+    "imageUrl": "/images/albuterol.png"
   },
   {
     "id": "6",
     "name": "Prednisone",
     "category": "Corticosteroid",
     "use": "Inflammation & Autoimmune Flares",
-    "description": "ยาสเตียรอยด์ ลดการอักเสบและกดภูมิคุ้มกัน",
-    "imageUrl": "/images/prednisone.jpg"
+    "description": "ยาสเตียรอยด์สังเคราะห์ที่มีฤทธิ์ต้านการอักเสบและกดภูมิคุ้มกันอย่างทรงพลัง ใช้รักษาอาการอักเสบรุนแรง โรคภูมิแพ้ตัวเอง (Autoimmune) หรือหอบหืดกำเริบ ห้ามหยุดยาเองกะทันหันหากใช้ติดต่อกันเป็นเวลานานเนื่องจากต้องมีการลดขนาดยาลงทีละน้อย",
+    "imageUrl": "/images/prednisone.png"
   },
   {
     "id": "7",
     "name": "Metoprolol",
     "category": "Cardiovascular",
     "use": "Heart Rate & Blood Pressure",
-    "description": "ยาลดความดันโลหิตและควบคุมอัตราการเต้นของหัวใจ",
-    "imageUrl": "/images/metoprolol.jpg"
+    "description": "ยาลดความดันโลหิตกลุ่ม Beta-blocker ออกฤทธิ์ลดอัตราการเต้นของหัวใจและลดภาระการทำงานของหัวใจ ใช้รักษาความดันโลหิตสูง ภาวะหัวใจเต้นผิดจังหวะ และป้องกันอาการเจ็บหน้าอก (Angina)",
+    "imageUrl": "/images/metoprolol.png"
   },
   {
     "id": "8",
     "name": "Gabapentin",
     "category": "Neurological",
     "use": "Nerve Pain & Seizures",
-    "description": "ยารักษาอาการปวดเส้นประสาทและโรคลมชัก",
-    "imageUrl": "/images/gabapentin.jpg"
+    "description": "ยากลุ่ม Anticonvulsant ใช้รักษาอาการปวดเส้นประสาทเรื้อรัง (เช่น จากโรคงูสวัดหรือปลายประสาทอักเสบจากเบาหวาน) และใช้ร่วมในการควบคุมโรคลมชัก ผลข้างเคียงที่พบบ่อยคืออาการง่วงซึมและเวียนศีรษะ",
+    "imageUrl": "/images/gabapentin.png"
   },
   {
     "id": "9",
     "name": "Amoxicillin",
     "category": "Antibiotic",
     "use": "Bacterial Infections (Wide Range)",
-    "description": "ยาปฏิชีวนะ รักษาการติดเชื้อแบคทีเรียหลายชนิด",
-    "imageUrl": "/images/amoxicillin.jpg"
+    "description": "ยาปฏิชีวนะกลุ่มเพนิซิลลิน ออกฤทธิ์ฆ่าเชื้อแบคทีเรียหลายชนิด ใช้รักษาการติดเชื้อทางเดินหายใจ หูคอจมูก และทางเดินปัสสาวะ ต้องรับประทานติดต่อกันจนหมดตามแพทย์สั่งแม้จะอาการดีขึ้นแล้วเพื่อป้องกันเชื้อดื้อยา",
+    "imageUrl": "/images/amoxicillin.png"
   },
   {
     "id": "10",
     "name": "Atorvastatin",
     "category": "Cardiovascular",
     "use": "Cholesterol Lowering (Lipitor)",
-    "description": "ยาลดคอเลสเตอรอลและไขมันในเลือด",
-    "imageUrl": "/images/atorvastatin.jpg"
+    "description": "ยาลดไขมันในเลือดกลุ่ม Statin ออกฤทธิ์ยับยั้งเอนไซม์ HMG-CoA reductase ในตับเพื่อลดการสร้างคอเลสเตอรอลชนิดไม่ดี (LDL) และไตรглиเซอไรด์ ช่วยลดความเสี่ยงโรคหัวใจและหลอดเลือด",
+    "imageUrl": "/images/atorvastatin.png"
   },
   {
     "id": "11",
     "name": "Amlodipine",
     "category": "Cardiovascular",
     "use": "High Blood Pressure (Calcium Blocker)",
-    "description": "ยาลดความดันโลหิตสูง (กลุ่มบล็อกแคลเซียม)",
-    "imageUrl": "/images/amlodipine.jpg"
+    "description": "ยาลดความดันโลหิตกลุ่ม Calcium Channel Blocker ออกฤทธิ์ขยายหลอดเลือดแดงโดยการยับยั้งการเข้าสู่เซลล์ของแคลเซียม ทำให้ความดันลดลงและลดอาการเจ็บหน้าอก ผลข้างเคียงอาจมีอาการบวมที่ข้อเท้า",
+    "imageUrl": "/images/amlodipine.png"
   },
   {
     "id": "12",
     "name": "Hydrochlorothiazide",
     "category": "Diuretic",
     "use": "Diuretic (Water Pill) & High BP",
-    "description": "ยาขับปัสสาวะและลดความดันโลหิต",
-    "imageUrl": "/images/hydrochlorothiazide.jpg"
+    "description": "ยาขับปัสสาวะกลุ่ม Thiazide ช่วยขับเกลือโซเดียมและน้ำออกจากร่างกาย นิยมใช้เป็นยาหลักในการรักษาความดันโลหิตสูงและลดอาการบวมน้ำ ควรรับประทานในตอนเช้าเพื่อไม่ให้รบกวนการนอนหลับจากการลุกมาปัสสาวะตอนดึก",
+    "imageUrl": "/images/hydrochlorothiazide.png"
   },
   {
     "id": "13",
     "name": "Naproxen",
     "category": "NSAID",
     "use": "Arthritis & Muscle Pain Relief",
-    "description": "ยาบรรเทาอาการปวดข้อและกล้ามเนื้ออักเสบ",
-    "imageUrl": "/images/naproxen.jpg"
+    "description": "ยาแก้ปวดและลดการอักเสบกลุ่ม NSAIDs ออกฤทธิ์ยาวนานกว่าไอบูโปรเฟน ช่วยบรรเทาอาการปวดข้ออักเสบ รูมาตอยด์ ปวดกล้ามเนื้อ หรือปวดประจำเดือน ควรทานหลังอาหารและดื่มน้ำตามมากๆ",
+    "imageUrl": "/images/naproxen.png"
   },
   {
     "id": "14",
     "name": "Escitalopram",
     "category": "Psychiatric",
     "use": "Depression & Anxiety (SSRI)",
-    "description": "ยารักษาโรคซึมเศร้าและวิตกกังวล (กลุ่ม SSRI)",
-    "imageUrl": "/images/escitalopram.jpg"
+    "description": "ยาต้านเศร้ารุ่นใหม่กลุ่ม SSRI ที่มีความจำเพาะสูง ช่วยปรับสมดุลสารเซโรโทนินในสมอง ใช้รักษาโรคซึมเศร้าและโรคตื่นตระหนก (Panic Disorder) มีผลข้างเคียงน้อยกว่ายารุ่นเก่า",
+    "imageUrl": "/images/escitalopram.png"
   },
   {
     "id": "15",
     "name": "Famotidine",
     "category": "Gastrointestinal",
     "use": "Acid Reflux & Ulcer Prevention",
-    "description": "ยาลดกรด รักษาแผลในกระเพาะและกรดไหลย้อน",
-    "imageUrl": "/images/famotidine.jpg"
+    "description": "ยาลดกรดกลุ่ม H2 blocker ออกฤทธิ์ยับยั้งการหลั่งกรดจากผนังกระเพาะอาหาร ใช้รักษาอาการกรดไหลย้อน แผลในกระเพาะอาหาร และภาวะอาหารไม่ย่อยจากกรดเกิน",
+    "imageUrl": "/images/famotidine.png"
   },
   {
     "id": "16",
     "name": "Apixaban",
     "category": "Cardiovascular",
     "use": "Stroke & Blood Clot Prevention",
-    "description": "ยาป้องกันการเกิดลิ่มเลือดและโรคหลอดเลือดสมอง",
-    "imageUrl": "/images/apixaban.jpg"
+    "description": "ยาต้านการแข็งตัวของเลือดรุ่นใหม่ (DOAC) ออกฤทธิ์ยับยั้งแฟคเตอร์ Xa โดยตรง ใช้ป้องกันการเกิดลิ่มเลือดอุดตันในผู้ป่วยหัวใจเต้นผิดจังหวะชนิดไม่ใช่ลิ้นหัวใจ และป้องกันลิ่มเลือดหลังผ่าตัดเปลี่ยนข้อ ไม่ต้องเจาะเลือดตรวจบ่อยเท่าชาวฟาริน",
+    "imageUrl": "/images/apixaban.png"
   },
   {
     "id": "17",
     "name": "Sumatriptan",
     "category": "Neurological",
     "use": "Migraine & Headache Relief",
-    "description": "ยาบรรเทาอาการปวดหัวไมเกรน",
-    "imageUrl": "/images/sumatriptan.jpg"
+    "description": "ยาเฉพาะทางสำหรับบรรเทาอาการปวดหัวไมเกรน ออกฤทธิ์กระตุ้นตัวรับเซโรโทนินทำให้หลอดเลือดในสมองที่ขยายตัวหดกลับสู่ภาวะปกติ ควรใช้ทันทีเมื่อเริ่มมีอาการไมเกรนกำเริบ",
+    "imageUrl": "/images/sumatriptan.png"
   },
   {
     "id": "18",
     "name": "Allopurinol",
     "category": "Musculoskeletal",
     "use": "Gout & Uric Acid Control",
-    "description": "ยาควบคุมกรดยูริกและรักษาโรคเกาต์",
-    "imageUrl": "/images/allopurinol.jpg"
+    "description": "ยาลดระดับกรดยูริกในเลือด ออกฤทธิ์ยับยั้งเอนไซม์ Xanthine oxidase เพื่อลดการสร้างกรดยูริก ใช้ป้องกันการเกิดโรคเกาต์กำเริบและนิ่วในไต ช่วงเริ่มทานอาจกระตุ้นให้เกาต์กำเริบชั่วคราว จึงมักทานคู่กับยาแก้อักเสบในช่วงแรก",
+    "imageUrl": "/images/allopurinol.png"
   },
   {
     "id": "19",
     "name": "Valsartan",
     "category": "Cardiovascular",
     "use": "Heart Failure & High Blood Pressure",
-    "description": "ยารักษาภาวะหัวใจล้มเหลวและความดันโลหิตสูง",
-    "imageUrl": "/images/valsartan.jpg"
+    "description": "ยาลดความดันโลหิตกลุ่ม ARB (Angiotensin II Receptor Blocker) ออกฤทธิ์บล็อกฮอร์โมนที่ทำให้หลอดเลือดหดตัว ช่วยลดความดันโลหิต ป้องกันโรคไตจากเบาหวาน และช่วยเสริมการทำงานของหัวใจในผู้ป่วยหัวใจล้มเหลว",
+    "imageUrl": "/images/valsartan.png"
   },
   {
     "id": "20",
     "name": "Fluconazole",
     "category": "Antifungal",
     "use": "Fungal Infections (Yeast & Skin)",
-    "description": "ยารักษาการติดเชื้อเชื้อราที่ผิวหนังและช่องคลอด",
-    "imageUrl": "/images/fluconazole.jpg"
+    "description": "ยาฆ่าเชื้อรากลุ่ม Triazole ออกฤทธิ์ขัดขวางการสร้างผนังเซลล์ของเชื้อรา ใช้รักษาการติดเชื้อราที่ผิวหนัง เล็บ ช่องคลอด หรือเชื้อราในกระแสเลือด ควรระวังปฏิกิริยาระหว่างยากับยาอื่นค่อนข้างมาก",
+    "imageUrl": "/images/fluconazole.png"
   },
   {
     "id": "21",
     "name": "Metformin",
     "category": "Endocrine",
     "use": "Type 2 Diabetes (First Line)",
-    "description": "ยารักษาเบาหวานชนิดที่ 2 (ยาตัวแรกที่แนะนำ)",
-    "imageUrl": "/images/metformin.jpg"
+    "description": "ยารักษาโรคเบาหวานชนิดที่ 2 เป็นยาตัวแรกที่แพทย์เลือกใช้ ออกฤทธิ์ลดการสร้างน้ำตาลจากตับและเพิ่มความไวของเซลล์ต่ออินซูลิน ช่วยควบคุมระดับน้ำตาลโดยไม่ทำให้เกิดภาวะน้ำตาลในเลือดต่ำ",
+    "imageUrl": "/images/metformin.png"
   },
   {
     "id": "22",
     "name": "Omeprazole",
     "category": "Gastrointestinal",
     "use": "Acid Reflux & Stomach Ulcers",
-    "description": "ยาลดการหลั่งกรด รักษาแผลในกระเพาะและกรดไหลย้อน",
-    "imageUrl": "/images/omeprazole.jpg"
+    "description": "ยาลดกรดกลุ่ม PPI (Proton Pump Inhibitor) ออกฤทธิ์ยับยั้งการหลั่งกรดในกระเพาะอาหารได้อย่างมีประสิทธิภาพสูงสุด ใช้รักษาโรคกรดไหลย้อนขั้นรุนแรง แผลในกระเพาะและลำไส้ ควรรับประทานก่อนอาหารเช้าประมาณ 30 นาที",
+    "imageUrl": "/images/omeprazole.png"
   },
   {
     "id": "23",
     "name": "Levothyroxine",
     "category": "Endocrine",
     "use": "Hypothyroidism Replacement",
-    "description": "ฮอร์โมนทดแทนสำหรับผู้ที่มีภาวะไทรอยด์ทำงานต่ำ",
-    "imageUrl": "/images/levothyroxine.jpg"
+    "description": "ฮอร์โมนไทรอยด์สังเคราะห์ (T4) ใช้ทดแทนฮอร์โมนธรรมชาติในผู้ป่วยที่มีภาวะต่อมไทรอยด์ทำงานต่ำ (Hypothyroidism) ช่วยปรับระบบเผาผลาญในร่างกายให้กลับสู่ภาวะปกติ ควรทานตอนท้องว่างช่วงเช้า",
+    "imageUrl": "/images/levothyroxine.png"
   },
   {
     "id": "24",
     "name": "Lisinopril",
     "category": "Cardiovascular",
     "use": "High Blood Pressure (ACE Inhibitor)",
-    "description": "ยาลดความดันโลหิตสูง (กลุ่มยับยั้งเอนไซม์ ACE)",
-    "imageUrl": "/images/lisinopril.jpg"
+    "description": "ยาลดความดันโลหิตกลุ่ม ACE inhibitor ช่วยขยายหลอดเลือดและลดภาระของหัวใจ ผลข้างเคียงเฉพาะตัวที่พบได้บ่อยคืออาการไอแห้งเรื้อรัง หากมีอาการไอมากควรปรึกษาแพทย์เพื่อเปลี่ยนกลุ่มยา",
+    "imageUrl": "/images/lisinopril.png"
   },
   {
     "id": "25",
     "name": "Ondansetron",
     "category": "Gastrointestinal",
     "use": "Nausea & Vomiting Control",
-    "description": "ยาควบคุมและบรรเทาอาการคลื่นไส้อาเจียน",
-    "imageUrl": "/images/ondansetron.jpg"
+    "description": "ยาป้องกันและระงับอาการคลื่นไส้อาเจียน ออกฤทธิ์บล็อกตัวรับสารเซโรโทนิน นิยมใช้ในผู้ป่วยที่ได้รับยาเคมีบำบัด ฉายแสง หรือหลังการผ่าตัดที่มีอาการคลื่นไส้อย่างรุนแรง",
+    "imageUrl": "/images/ondansetron.png"
   },
   {
     "id": "26",
     "name": "Ciprofloxacin",
     "category": "Antibiotic",
     "use": "UTI & Bacterial Infections",
-    "description": "ยาปฏิชีวนะ รักษากระเพาะปัสสาวะอักเสบและติดเชื้อ",
-    "imageUrl": "/images/ciprofloxacin.jpg"
+    "description": "ยาปฏิชีวนะกลุ่ม Fluoroquinolone ออกฤทธิ์ฆ่าเชื้อแบคทีเรียครอบคลุมกว้าง ใช้รักษาการติดเชื้อทางเดินปัสสาวะ (UTI) ทางเดินอาหาร และการติดเชื้อในกระดูกและข้อ หลีกเลี่ยงการทานร่วมกับยาลดกรดที่มีส่วนผสมของอลูมิเนียมหรือแมกนีเซียม",
+    "imageUrl": "/images/ciprofloxacin.png"
   },
   {
     "id": "27",
     "name": "Clopidogrel",
     "category": "Cardiovascular",
     "use": "Stroke & Heart Attack Prevention",
-    "description": "ยาต้านเกล็ดเลือด ป้องกันโรคหลอดเลือดสมองและหัวใจวาย",
-    "imageUrl": "/images/clopidogrel.jpg"
+    "description": "ยาต้านเกล็ดเลือด ออกฤทธิ์ป้องกันไม่ให้เกล็ดเลือดเกาะตัวเป็นก้อนและอุดตันในหลอดเลือด ใช้ป้องกันโรคกล้ามเนื้อหัวใจตายและอัมพฤกษ์อัมاطาต มักใช้ร่วมกับแอสไพรินตามคำแนะนำของแพทย์",
+    "imageUrl": "/images/clopidogrel.png"
   },
   {
     "id": "28",
     "name": "Losartan",
     "category": "Cardiovascular",
     "use": "Blood Pressure & Kidney Protection",
-    "description": "ยาลดความดันโลหิตและช่วยชะลอความเสื่อมของไต",
-    "imageUrl": "/images/losartan.jpg"
+    "description": "ยาลดความดันโลหิตกลุ่ม ARB มีจุดเด่นนอกจากช่วยลดความดันแล้ว ยังช่วยปกป้องการเสื่อมของไตในผู้ป่วยโรคเบาหวานขึ้นไต เป็นทางเลือกที่ดีสำหรับผู้ที่แพ้ยากลุ่ม ACE inhibitor แล้วมีอาการไอ",
+    "imageUrl": "/images/losartan.png"
   },
   {
     "id": "29",
     "name": "Azithromycin",
     "category": "Antibiotic",
     "use": "Respiratory Tract Infections",
-    "description": "ยาปฏิชีวนะ รักษาการติดเชื้อในระบบทางเดินหายใจ",
-    "imageUrl": "/images/azithromycin.jpg"
+    "description": "ยาปฏิชีวนะกลุ่ม Macrolide ออกฤทธิ์ยับยั้งการเจริญเติบโตของแบคทีเรีย ใช้รักษาการติดเชื้อทางเดินหายใจ หลอดลมอักเสบ หรือไซนัสอักเสบ มีจุดเด่นคือรับประทานติดต่อกันเพียงสั้นๆ แต่ยาจะยังคงออกฤทธิ์ในร่างกายต่อได้อีกหลายวัน",
+    "imageUrl": "/images/azithromycin.png"
   },
   {
     "id": "30",
     "name": "Insulin Glargine",
     "category": "Endocrine",
     "use": "Long Acting Basal Insulin",
-    "description": "อินซูลินออกฤทธิ์ยาว ควบคุมน้ำตาลในเลือดพื้นฐาน",
-    "imageUrl": "/images/insulin_glargine.jpg"
+    "description": "อินซูลินชนิดออกฤทธิ์นาน (Long-acting basal insulin) ฉีดเพียงวันละ 1 ครั้งเพื่อควบคุมระดับน้ำตาลในเลือดช่วงอดอาหารและเวลากลางคืน ช่วยรักษาระดับอินซูลินพื้นฐานในร่างกายผู้ป่วยเบาหวาน",
+    "imageUrl": "/images/insulin_glargine.png"
   },
   {
     "id": "31",
     "name": "Montelukast",
     "category": "Respiratory",
     "use": "Asthma & Allergic Rhinitis",
-    "description": "ยาควบคุมอาการหอบหืดและภูมิแพ้อากาศ",
-    "imageUrl": "/images/montelukast.jpg"
+    "description": "ยากลุ่ม Leukotriene receptor antagonist ออกฤทธิ์ขัดขวางสารที่ทำให้หลอดเลือดหดตัวและเกิดการอักเสบ ใช้ควบคุมอาการหอบหืดระยะยาวและบรรเทาอาการจมูกอักเสบจากภูมิแพ้ (แพ้อากาศ)",
+    "imageUrl": "/images/montelukast.png"
   },
   {
     "id": "32",
     "name": "Pantoprazole",
     "category": "Gastrointestinal",
     "use": "Acid Reflux & Esophagitis",
-    "description": "ยาลดกรด รักษาหลอดอาหารอักเสบและกรดไหลย้อน",
-    "imageUrl": "/images/pantoprazole.jpg"
+    "description": "ยาลดกรดกลุ่ม PPI ออกฤทธิ์ยับยั้งการหลั่งกรดในกระเพาะอาหาร ใช้รักษาโรคกรดไหลย้อน แผลในกระเพาะ และภาวะหลอดอาหารอักเสบจากการกัดของกรด สามารถรับประทานได้โดยไม่ต้องกังวลเรื่องมื้ออาหารมากนัก",
+    "imageUrl": "/images/pantoprazole.png"
   },
   {
     "id": "33",
     "name": "Amitriptyline",
     "category": "Psychiatric",
     "use": "Nerve Pain & Sleep Support",
-    "description": "ยารักษาอาการปวดปลายประสาทและช่วยให้นอนหลับ",
-    "imageUrl": "/images/amitriptyline.jpg"
+    "description": "ยาต้านเศร้ารุ่นเก่ากลุ่ม Tricyclic antidepressant (TCA) ปัจจุบันนิยมนำมาใช้ในขนาดต่ำเพื่อรักษาอาการปวดปลายประสาทเรื้อรัง ไมเกรน และช่วยให้นอนหลับ ผลข้างเคียงคืออาจมีอาการปากแห้ง ตาพร่า และง่วงนอน",
+    "imageUrl": "/images/amitriptyline.png"
   },
   {
     "id": "34",
     "name": "Carvedilol",
     "category": "Cardiovascular",
     "use": "Heart Failure (Beta Blocker)",
-    "description": "ยารักษาหัวใจล้มเหลว (กลุ่มเบต้าบล็อกเกอร์)",
-    "imageUrl": "/images/carvedilol.jpg"
+    "description": "ยาลดความดันและรักษาหัวใจล้มเหลวกลุ่ม Beta-blocker มีฤทธิ์ขยายหลอดเลือดร่วมด้วย ช่วยลดอัตราการเต้นของหัวใจและเพิ่มประสิทธิภาพการบีบตัวของหัวใจในผู้ป่วยภาวะหัวใจล้มเหลวเรื้อรัง",
+    "imageUrl": "/images/carvedilol.png"
   },
   {
     "id": "35",
     "name": "Digoxin",
     "category": "Cardiovascular",
     "use": "Heart Failure & Atrial Fibrillation",
-    "description": "ยารักษาภาวะหัวใจล้มเหลวและหัวใจเต้นผิดจังหวะ",
-    "imageUrl": "/images/digoxin.jpg"
+    "description": "ยาสกัดจากพืชดิจิทาลิส ช่วยเพิ่มแรงบีบตัวของกล้ามเนื้อหัวใจและควบคุมอัตราการเต้นของหัวใจในภาวะหัวใจห้องบนสั่นพลิ้ว (AF) เป็นยาที่มีช่วงการรักษาแคบ (Narrow therapeutic index) ต้องระวังภาวะพิษจากยา",
+    "imageUrl": "/images/digoxin.png"
   },
   {
     "id": "36",
     "name": "Methotrexate",
     "category": "Immunosuppressant",
     "use": "Rheumatoid Arthritis",
-    "description": "ยากดภูมิคุ้มกัน รักษาโรครูมาตอยด์อักเสบ",
-    "imageUrl": "/images/methotrexate.jpg"
+    "description": "ยากดภูมิคุ้มกันและต้านมะเร็ง ใช้ในขนาดต่ำสำหรับรักษาโรครูมาตอยด์อักเสบและสะเก็ดเงิน โดยออกฤทธิ์ลดกระบวนการอักเสบของระบบภูมิคุ้มกัน ผู้ป่วยต้องตรวจตับและเม็ดเลือดเป็นประจำตามแพทย์นัด",
+    "imageUrl": "/images/methotrexate.png"
   },
   {
     "id": "37",
     "name": "Tamsulosin",
     "category": "Urological",
     "use": "Enlarged Prostate & Urine Flow",
-    "description": "ยารักษาต่อมลูกหมากโตและช่วยเรื่องการปัสสาวะ",
-    "imageUrl": "/images/tamsulosin.jpg"
+    "description": "ยากลุ่ม Alpha-1 blocker ออกฤทธิ์คลายกล้ามเนื้อเรียบที่ต่อมลูกหมากและคอกระเพาะปัสสาวะ ช่วยให้ปัสสาวะไหลสะดวกขึ้น ลดอาการขัดเบาในผู้ป่วยโรคต่อมลูกหมากโต",
+    "imageUrl": "/images/tamsulosin.png"
   },
   {
     "id": "38",
     "name": "Enoxaparin",
     "category": "Cardiovascular",
     "use": "DVT Prevention (Injection)",
-    "description": "ยาฉีดต้านการแข็งตัวของเลือด ป้องกันหลอดเลือดดำอุดตัน",
-    "imageUrl": "/images/enoxaparin.jpg"
+    "description": "ยาต้านการแข็งตัวของเลือดชนิดฉีดกลุ่ม LMWH (Low Molecular Weight Heparin) ใช้ป้องกันและรักษาภาวะลิ่มเลือดอุดตันในหลอดเลือดดำลึก (DVT) หรือใช้ในผู้ป่วยผ่าตัดใหญ่ตามแพทย์สั่ง",
+    "imageUrl": "/images/enoxaparin.png"
   },
   {
     "id": "39",
     "name": "Naloxone",
     "category": "Antidote",
     "use": "Opioid Overdose Reversal",
-    "description": "ยาต้านพิษ ใช้แก้ภาวะได้รับยาแก้ปวดกลุ่มโอปิออยด์เกินขนาด",
-    "imageUrl": "/images/naloxone.jpg"
+    "description": "ยาต้านพิษฉุกเฉิน ออกฤทธิ์แย่งจับกับตัวรับโอปิออยด์ในสมองอย่างรวดเร็ว ใช้ช่วยชีวิตผู้ป่วยที่ได้รับยาแก้ปวดกลุ่มโอปิออยด์เกินขนาดจนมีภาวะกดการหายใจขั้นวิกฤต",
+    "imageUrl": "/images/naloxone.png"
   },
   {
     "id": "40",
     "name": "Epinephrine",
     "category": "Emergency",
     "use": "Anaphylaxis Emergency",
-    "description": "ยาฉีดฉุกเฉินสำหรับอาการแพ้รุนแรงเฉียบพลัน",
-    "imageUrl": "/images/epinephrine.jpg"
+    "description": "ยาฉีดฮอร์โมนฉุกเฉินสำหรับช่วยชีวิตในภาวะแพ้รุนแรงเฉียบพลัน (Anaphylactic shock) เช่น แพ้อาหารหรือแมลงสัตว์กัดต่อย ออกฤทธิ์ขยายหลอดลมทันทีและเพิ่มความดันโลหิต",
+    "imageUrl": "/images/epinephrine.png"
   },
   {
     "id": "41",
     "name": "Tramadol",
     "category": "Analgesic",
     "use": "Moderate to Severe Pain",
-    "description": "ยาแก้ปวดระดับปานกลางถึงรุนแรง",
-    "imageUrl": "/images/tramadol.jpg"
+    "description": "ยาแก้ปวดกลุ่มโอปิออยด์สังเคราะห์ ออกฤทธิ์ที่ระบบประสาทส่วนกลางเพื่อระงับอาการปวดระดับปานกลางถึงรุนแรง ควรใช้อย่างระมัดระวังเพราะอาจเสี่ยงต่อการเสพติดหรือมีอาการง่วงซึมเวียนศีรษะ",
+    "imageUrl": "/images/tramadol.png"
   },
   {
     "id": "42",
     "name": "Alprazolam",
     "category": "Psychiatric",
     "use": "Anxiety & Panic Disorder",
-    "description": "ยาคลายกังวล รักษาโรควิตกกังวลและแพนิค",
-    "imageUrl": "/images/alprazolam.jpg"
+    "description": "ยาคลายกังวลกลุ่ม Benzodiazepine ออกฤทธิ์เร็วเพื่อลดความวิตกกังวล อาการตื่นตระหนก (Panic) และช่วยให้นอนหลับ เป็นยาควบคุมพิเศษ ห้ามใช้ติดต่อกันเป็นเวลานานเพราะอาจเกิดภาวะดื้อยาและติดยาได้",
+    "imageUrl": "/images/alprazolam.png"
   },
   {
     "id": "43",
     "name": "Spironolactone",
     "category": "Diuretic",
     "use": "Heart Failure & Edema",
-    "description": "ยาขับปัสสาวะแบบสงวนโพแทสเซียม ลดบวมและรักษาหัวใจล้มเหลว",
-    "imageUrl": "/images/spironolactone.jpg"
+    "description": "ยาขับปัสสาวะแบบสงวนโพแทสเซียม (Potassium-sparing diuretic) ช่วยขับน้ำและเกลือโซเดียมออกแต่ยังคงเก็บโพแทสเซียมไว้ในร่างกาย นิยมใช้ร่วมรักษาภาวะหัวใจล้มเหลวและโรคความดันโลหิตสูง",
+    "imageUrl": "/images/spironolactone.png"
   },
   {
     "id": "44",
     "name": "Rosuvastatin",
     "category": "Cardiovascular",
     "use": "High Cholesterol Control",
-    "description": "ยาควบคุมและลดระดับคอเลสเตอรอลในเลือดสูง",
-    "imageUrl": "/images/rosuvastatin.jpg"
+    "description": "ยาลดไขมันในเลือดกลุ่ม Statin ที่มีความแรงสูง ออกฤทธิ์ลดคอเลสเตอรอลรวมและ LDL ได้อย่างมีประสิทธิภาพ ช่วยลดการสะสมของคราบไขมันในผนังหลอดเลือดและป้องกันโรคหลอดเลือดหัวใจ",
+    "imageUrl": "/images/rosuvastatin.png"
   },
   {
     "id": "45",
     "name": "Aspirin",
     "category": "Cardiovascular",
     "use": "Heart Attack & Stroke Prevention",
-    "description": "ยาต้านเกล็ดเลือด ป้องกันกล้ามเนื้อหัวใจขาดเลือดและหลอดเลือดสมอง",
-    "imageUrl": "/images/aspirin.jpg"
+    "description": "ยาแอสไพรินขนาดต่ำ ออกฤทธิ์ต้านเกล็ดเลือดไม่ให้เกาะตัวกัน ป้องกันการเกิดลิ่มเลือดอุดตันในหลอดเลือดหัวใจและสมอง ลดความเสี่ยงภาวะหัวใจวายและอัมพฤกษ์ในผู้ป่วยกลุ่มเสี่ยง",
+    "imageUrl": "/images/aspirin.png"
   },
   {
     "id": "46",
     "name": "Atenolol",
     "category": "Cardiovascular",
     "use": "High Blood Pressure (Beta Blocker)",
-    "description": "ยาลดความดันโลหิต (กลุ่มเบต้าบล็อกเกอร์)",
-    "imageUrl": "/images/atenolol.jpg"
+    "description": "ยาลดความดันโลหิตกลุ่ม Beta-blocker ออกฤทธิ์บล็อกการทำงานของระบบประสาทซิมพาเทติกต่อหัวใจ ช่วยลดอัตราการเต้นของหัวใจและความดันโลหิต ใช้รักษาความดันโลหิตสูงและอาการเจ็บหน้าอก",
+    "imageUrl": "/images/atenolol.png"
   },
   {
     "id": "47",
     "name": "Doxycycline",
     "category": "Antibiotic",
     "use": "Acne & Bacterial Infections",
-    "description": "ยาปฏิชีวนะ รักษาสิวอักเสบและการติดเชื้อแบคทีเรีย",
-    "imageUrl": "/images/doxycycline.jpg"
+    "description": "ยาปฏิชีวนะกลุ่ม Tetracycline ใช้รักษาการติดเชื้อแบคทีเรีย โรคติดเชื้อทางเพศสัมพันธ์ และนิยมนำมาใช้รักษาปัญหาสิวอักเสบเรื้อรัง ข้อควรระวังคือทำให้ผิวไวต่อแสงแดดมากขึ้น",
+    "imageUrl": "/images/doxycycline.png"
   },
   {
     "id": "48",
     "name": "Cetirizine",
     "category": "Antihistamine",
     "use": "Allergy & Hay Fever Relief",
-    "description": "ยาแก้แพ้ บรรเทาอาการภูมิแพ้และลมพิษ",
-    "imageUrl": "/images/cetirizine.jpg"
+    "description": "ยาแก้แพ้รุ่นที่ 2 กลุ่ม Antihistamine ออกฤทธิ์บล็อกฮีสตามีน บรรเทาอาการแพ้อากาศ น้ำมูกไหล คันตา ลมพิษ และผื่นแพ้ผิวหนัง มีอาการง่วงซึมค่อนข้างน้อยกว่ายาแก้แพ้รุ่นเก่า",
+    "imageUrl": "/images/cetirizine.png"
   }
 ]

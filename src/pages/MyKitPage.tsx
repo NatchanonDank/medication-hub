@@ -25,9 +25,9 @@ export const MyKitPage: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto space-y-6">
-      <div className="flex items-center gap-3 border-b border-base-200 pb-4">
+      <div className="flex items-center gap-3 border-b border-base-200 pb-4 ">
         <h1 className="text-3xl font-bold text-primary">กระเป๋ายาส่วนตัว</h1>
-        <div className="badge badge-primary">{savedMeds.length} รายการ</div>
+        <div className="badge badge-primary w-20 ">{savedMeds.length} รายการ</div>
       </div>
 
       {savedMeds.length === 0 ? (
@@ -41,7 +41,14 @@ export const MyKitPage: React.FC = () => {
           {savedMeds.map((med) => (
             <div key={med.id} className="card bg-base-100 shadow-md border border-base-200">
               <figure className="px-4 pt-4">
-                <img src={med.imageUrl} alt={med.name} className="h-32 object-contain mix-blend-multiply" />
+                <img 
+                  src={med.imageUrl} 
+                  alt={med.name} 
+                  className="h-32 object-contain mx-auto" 
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://placehold.co/400x300?text=No+Image';
+                  }}
+                />
               </figure>
               <div className="card-body p-4 text-center">
                 <h3 className="card-title text-lg justify-center">{med.name}</h3>

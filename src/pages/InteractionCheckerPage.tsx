@@ -17,10 +17,14 @@ export const InteractionCheckerPage: React.FC = () => {
   }
 
   // จำลองการตรวจสอบปฏิกิริยาระหว่างยา
-  const checkInteraction = () => {
+const checkInteraction = () => {
     if (!med1Id || !med2Id) return;
+    
     if (med1Id === med2Id) {
-      setResult({ status: 'warning', message: 'คุณเลือกยาทั้งสองชนิดซ้ำกัน กรุณาเลือกยาที่แตกต่างกัน' });
+      setResult({ 
+        status: 'warning', 
+        message: 'คุณเลือกยาทั้งสองชนิดซ้ำกัน กรุณาเลือกยาที่แตกต่างกันเพื่อตรวจสอบ' 
+      });
       return;
     }
 
@@ -28,25 +32,111 @@ export const InteractionCheckerPage: React.FC = () => {
     const med2 = medications.find((m) => m.id === med2Id);
 
     if (!med1 || !med2) return;
-    // จำลองกฎการชนกันของยา
-    const isNSAID = med1.category === 'NSAID' || med2.category === 'NSAID';
-    const isBloodThinner = med1.id === '3' || med2.id === '3' || med1.id === '16' || med2.id === '16'; // Warfarin, Apixaban
-    const isBP = med1.category === 'Cardiovascular' || med2.category === 'Cardiovascular';
 
+    // สำหรับจัดกลุ่มยา
+    const isCategory = (cat: string) => med1.category === cat || med2.category === cat;
+    const hasName = (...names: string[]) => names.some(n => med1.name.includes(n) || med2.name.includes(n));
+    const bothHaveCategory = (cat: string) => med1.category === cat && med2.category === cat;
+    const isBothCNS = ['Alprazolam', 'Amitriptyline', 'Gabapentin', 'Tramadol'].includes(med1.name) && ['Alprazolam', 'Amitriptyline', 'Gabapentin', 'Tramadol'].includes(med2.name);
+
+    // จัดกลุ่มยาตามการออกฤทธิ์
+    const isNSAID = isCategory('NSAID');
+    const isBloodThinner = hasName('Warfarin', 'Apixaban', 'Clopidogrel', 'Enoxaparin', 'Aspirin');
+    const isSSRI = hasName('Sertraline', 'Escitalopram');
+    const isTramadol = hasName('Tramadol');
+    const isStatin = hasName('Atorvastatin', 'Rosuvastatin');
+    const isFluconazole = hasName('Fluconazole');
+    const isDigoxin = hasName('Digoxin');
+    const isDiuretic = isCategory('Diuretic'); 
+    const isPotassiumSparing = hasName('Spironolactone');
+    const isAceArb = hasName('Lisinopril', 'Valsartan', 'Losartan');
+    const isPPI = hasName('Omeprazole', 'Pantoprazole');
+    const isClopidogrel = hasName('Clopidogrel');
+    const isMethotrexate = hasName('Methotrexate');
+
+    // ตรวจสอบปฏิกิริยาระหว่างยา
+
+    // กลุ่มเสี่ยงอันตราย (Danger)
     if (isNSAID && isBloodThinner) {
       setResult({
         status: 'danger',
-        message: `อันตราย! การทาน ${med1.name} ร่วมกับ ${med2.name} เพิ่มความเสี่ยงในการมีเลือดออกในกระเพาะอาหารขั้นรุนแรง`,
+        message: `อันตราย! การใช้ยาแก้ปวดกลุ่ม NSAID ร่วมกับยาละลายลิ่มเลือด/ต้านเกล็ดเลือด เพิ่มความเสี่ยงเลือดออกในทางเดินอาหารขั้นรุนแรง`,
       });
-    } else if (isNSAID && isBP) {
+    }
+    else if (isSSRI && isTramadol) {
+      setResult({
+        status: 'danger',
+        message: `อันตราย! การใช้ยาทั้งสองตัวนี้ร่วมกัน เพิ่มความเสี่ยงให้เกิดภาวะ Serotonin Syndrome (ไข้สูง, กล้ามเนื้อกระตุก, สับสน) ซึ่งเป็นอันตรายถึงชีวิต`,
+      });
+    }
+    else if (isStatin && isFluconazole) {
+      setResult({
+        status: 'danger',
+        message: `อันตราย! ยาฆ่าเชื้อรา Fluconazole จะเพิ่มระดับยาลดไขมัน Statin ในเลือด ทำให้เสี่ยงต่อภาวะกล้ามเนื้อลายสลายตัว (Rhabdomyolysis)`,
+      });
+    }
+    else if (hasName('Warfarin') && isFluconazole) {
+      setResult({
+        status: 'danger',
+        message: `อันตราย! Fluconazole เพิ่มระดับยา Warfarin ในเลือดอย่างมาก ทำให้เสี่ยงต่อภาวะเลือดออกรุนแรง ต้องปรับขนาดยาและเจาะเลือดดูค่า INR ทันที`,
+      });
+    }
+    else if (isAceArb && isPotassiumSparing) {
+      setResult({
+        status: 'danger',
+        message: `อันตราย! การใช้ยาลดความดัน (ACEi/ARB) ร่วมกับ Spironolactone อาจทำให้ระดับโพแทสเซียมในเลือดสูงเกินไป (Hyperkalemia) ซึ่งมีผลต่อจังหวะการเต้นของหัวใจ`,
+      });
+    }
+    else if (isDigoxin && isDiuretic && !isPotassiumSparing) {
+      setResult({
+        status: 'danger',
+        message: `อันตราย! ยาขับปัสสาวะอาจทำให้โพแทสเซียมต่ำ ซึ่งจะเพิ่มความเป็นพิษของ Digoxin (คลื่นไส้, ตาพร่า, หัวใจเต้นผิดจังหวะ)`,
+      });
+    }
+    
+    // กลุ่มควรเฝ้าระวัง (Warning)
+    else if (isPPI && isClopidogrel) {
       setResult({
         status: 'warning',
-        message: `เฝ้าระวัง: ${med1.name} และ ${med2.name} เมื่อทานร่วมกันอาจทำให้ประสิทธิภาพของยาลดความดันโลหิตลดลง ควรปรึกษาแพทย์`,
+        message: `เฝ้าระวัง: ยาลดกรด (โดยเฉพาะ Omeprazole) อาจลดประสิทธิภาพของยา Clopidogrel ในการป้องกันลิ่มเลือด ควรปรึกษาแพทย์เพื่อปรับยา`,
       });
-    } else {
+    }
+    else if (isMethotrexate && isNSAID) {
+      setResult({
+        status: 'warning',
+        message: `เฝ้าระวัง: ยาแก้ปวด NSAID สามารถลดการขับออกของ Methotrexate ทำให้ระดับยาในร่างกายสูงขึ้นและเกิดความเป็นพิษได้`,
+      });
+    }
+    else if (isBothCNS) {
+      setResult({
+        status: 'warning',
+        message: `เฝ้าระวัง: การใช้ยากดประสาท/คลายกังวล/แก้ปวด ร่วมกัน จะเสริมฤทธิ์ทำให้ง่วงซึมรุนแรง กดการหายใจ และเสี่ยงต่อการเกิดอุบัติเหตุ`,
+      });
+    }
+    else if (isSSRI && isNSAID) {
+      setResult({
+        status: 'warning',
+        message: `เฝ้าระวัง: การทานยาต้านเศร้ากลุ่ม SSRI ร่วมกับยาแก้ปวด NSAID เพิ่มความเสี่ยงให้เกิดแผลและเลือดออกในกระเพาะอาหาร`,
+      });
+    }
+    else if (isNSAID && (isAceArb || isDiuretic)) {
+      setResult({
+        status: 'warning',
+        message: `เฝ้าระวัง: ยาแก้ปวด NSAID สามารถลดประสิทธิภาพของยาลดความดันโลหิตและยาขับปัสสาวะ และอาจทำให้การทำงานของไตแย่ลง`,
+      });
+    }
+    else if (bothHaveCategory('Cardiovascular') || bothHaveCategory('Psychiatric') || bothHaveCategory('Diuretic')) {
+      setResult({
+        status: 'warning',
+        message: `เฝ้าระวัง: ยาทั้งสองชนิดอยู่ในกลุ่มการรักษาเดียวกัน อาจเกิดการเสริมฤทธิ์กัน (เช่น ความดันตกมากเกินไป หรือง่วงซึมมากเกินไป) ควรใช้ภายใต้คำสั่งแพทย์`,
+      });
+    }
+    
+    // ปลอดภัย (Safe)
+    else {
       setResult({
         status: 'safe',
-        message: `ปลอดภัย: ไม่พบปฏิกิริยารุนแรงระหว่าง ${med1.name} และ ${med2.name} ในฐานข้อมูลเบื้องต้น`,
+        message: `ปลอดภัย: ไม่พบปฏิกิริยารุนแรงระหว่าง ${med1.name} และ ${med2.name} ในฐานข้อมูลเบื้องต้น อย่างไรก็ตามหากมีอาการผิดปกติควรปรึกษาแพทย์`,
       });
     }
   };
