@@ -38,7 +38,7 @@ export const MedicationListPage = () => {
   }, [searchTerm, selectedCategory, sortOrder]);
 
   return (
-    <div className="container mx-auto px-4 py-8 w-full max-w-7xl">
+    <div className="w-full px-6 sm:px-8 lg:px-12 py-8">
       <div className="flex flex-col md:flex-row gap-4 mb-8 bg-base-100 p-4 rounded-xl shadow-sm border border-base-200">
         <div className="flex-1">
           <input

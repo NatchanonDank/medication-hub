@@ -19,7 +19,6 @@ const MainLayout = () => {
           </NavLink>
         </div>
 
-        {/* เมนูสำหรับหน้าจอขนาดใหญ่ (Desktop) */}
         <div className="flex-none gap-1 hidden md:flex">
           <NavLink to="/" className={navClass}>หน้าหลัก</NavLink>
           <NavLink to="/checker" className={navClass}>เช็คปฏิกิริยายา</NavLink>
@@ -27,7 +26,6 @@ const MainLayout = () => {
           <NavLink to="/about" className={navClass}>เกี่ยวกับเรา</NavLink>
         </div>
 
-        {/* เมนูแบบ Dropdown สำหรับมือถือ (Mobile Hamburger Menu) */}
         <div className="flex-none md:hidden dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-square">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -43,7 +41,7 @@ const MainLayout = () => {
         </div>
       </header>
       
-      <main className="container mx-auto px-4 py-8">
+      <main className="w-full py-8">
         <Outlet />
       </main>
     </div>
