@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { useMedications } from '../hooks/useMedications';
 import { useMedicationStore } from '../stores/useMedicationStore';
+import MedicationCard from '../components/MedicationCard';
 
 export const MyKitPage: React.FC = () => {
   const { data, isLoading, isError, refetch } = useMedications();
@@ -20,14 +21,14 @@ export const MyKitPage: React.FC = () => {
     );
   }
 
-  // คัดกรองเอาเฉพาะยาที่มี ID ตรงกับใน Zustand Store
-  const savedMeds = (data || []).filter((med) => myKit.includes(med.id));
+  // คัดกรองเอาเฉพาะยาที่มี ID ตรงกับใน Store
+  const savedMeds = (data || []).filter((med: any) => myKit.includes(med.id));
 
   return (
-    <div className="max-w-6xl mx-auto space-y-6">
+    <div className="max-w-7xl mx-auto px-4 py-8 space-y-6">
       <div className="flex items-center gap-3 border-b border-base-200 pb-4 ">
         <h1 className="text-3xl font-bold text-primary">กระเป๋ายาส่วนตัว</h1>
-        <div className="badge badge-primary w-20 ">{savedMeds.length} รายการ</div>
+        <div className="badge badge-primary badge-lg w-24">{savedMeds.length} รายการ</div>
       </div>
 
       {savedMeds.length === 0 ? (
@@ -37,29 +38,17 @@ export const MyKitPage: React.FC = () => {
           <Link to="/" className="btn btn-primary">ค้นหารายการยา</Link>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {savedMeds.map((med) => (
-            <div key={med.id} className="card bg-base-100 shadow-md border border-base-200">
-              <figure className="px-4 pt-4">
-                <img 
-                  src={med.imageUrl} 
-                  alt={med.name} 
-                  className="h-32 object-contain mx-auto" 
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://placehold.co/400x300?text=No+Image';
-                  }}
-                />
-              </figure>
-              <div className="card-body p-4 text-center">
-                <h3 className="card-title text-lg justify-center">{med.name}</h3>
-                <p className="text-sm text-base-content/70 line-clamp-1">{med.use}</p>
-                <div className="card-actions justify-center mt-3 gap-2">
-                  <Link to={`/medication/${med.id}`} className="btn btn-sm btn-ghost">รายละเอียด</Link>
-                  <button onClick={() => toggleKit(med.id)} className="btn btn-sm btn-error text-white">
-                    ลบออก
-                  </button>
-                </div>
-              </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+          {savedMeds.map((med: any) => (
+            <div key={med.id} className="relative group">
+              <MedicationCard medication={med} />
+              <button 
+                onClick={() => toggleKit(med.id)} 
+                className="btn btn-sm btn-error btn-circle absolute -top-2 -right-2 text-white shadow-lg z-10 opacity-90 hover:opacity-100 transition-opacity"
+                title="ลบออกจากกระเป๋ายา"
+              >
+                ✕
+              </button>
             </div>
           ))}
         </div>

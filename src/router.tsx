@@ -3,7 +3,7 @@ import { MedicationListPage } from './pages/MedicationListPage';
 import { MedicationDetailPage } from './pages/MedicationDetailPage';
 import { MyKitPage } from './pages/MyKitPage';
 import { AboutPage } from './pages/AboutPage';
-import { InteractionCheckerPage } from './pages/InteractionCheckerPage'; // 1. Import หน้าใหม่
+import { InteractionCheckerPage } from './pages/InteractionCheckerPage';
 
 const MainLayout = () => {
   const navClass = ({ isActive }: { isActive: boolean }) => 
@@ -13,8 +13,9 @@ const MainLayout = () => {
     <div className="min-h-screen bg-base-200 font-sans">
       <header className="navbar bg-base-100 shadow-sm px-6 sticky top-0 z-50">
         <div className="flex-1">
-          <NavLink to="/" className="text-2xl font-bold text-primary">
-            MedHub
+          <NavLink to="/" className="inline-flex items-center gap-2 text-2xl font-bold text-primary">
+            <img src="/icon.png" alt="MedHub Logo" className="w-7 h-7 object-contain" />
+            <span>MedHub</span>
           </NavLink>
         </div>
         <div className="flex-none gap-2 hidden sm:flex">

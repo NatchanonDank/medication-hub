@@ -1,137 +1,91 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router';
-import { useMedications } from '../hooks/useMedications';
-import { useMedicationStore } from '../stores/useMedicationStore';
-import type { Medication } from '../types/medication';
+import React, { useState, useMemo } from 'react';
+import medications from '../data/mock-medications.json';
+import MedicationCard from '../components/MedicationCard.tsx';
 
-export const MedicationListPage: React.FC = () => {
-  const { data, isLoading, isError, error, refetch } = useMedications();
-  const { myKit, toggleKit } = useMedicationStore();
-
+export const MedicationListPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [showOnlyKit, setShowOnlyKit] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
-  if (isLoading) {
-    return (
-      <div className="max-w-6xl mx-auto space-y-6">
-        <div className="flex flex-col sm:flex-row justify-between gap-4">
-          <div className="skeleton h-12 flex-1 rounded-lg" />
-          <div className="skeleton h-12 w-48 rounded-lg" />
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {Array.from({ length: 8 }).map((_, idx) => (
-            <div key={idx} className="card bg-base-100 shadow-xl border border-base-300 p-4 space-y-4">
-              <div className="skeleton h-40 w-full rounded-md" />
-              <div className="skeleton h-6 w-3/4 mx-auto" />
-              <div className="skeleton h-4 w-1/2 mx-auto" />
-              <div className="flex justify-between items-center pt-4">
-                <div className="skeleton h-8 w-24 rounded-lg" />
-                <div className="skeleton h-4 w-16" />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
+  // ดึงหมวดหมู่ทั้งหมดออกมาทำ Dropdown
+  const categories = useMemo(() => {
+    const cats = medications.map((m: any) => m.category);
+    return ['All', ...new Set(cats)];
+  }, []);
 
-  if (isError) {
-    return (
-      <div className="max-w-md mx-auto my-12 alert alert-error shadow-lg">
-        <div>
-          <h3 className="font-bold text-lg">เกิดข้อผิดพลาดในการโหลดข้อมูล!</h3>
-          <div className="text-sm">{(error as Error).message}</div>
-        </div>
-        <button onClick={() => refetch()} className="btn btn-sm btn-outline">
-          ลองใหม่ (Retry)
-        </button>
-      </div>
-    );
-  }
-
-  const medications: Medication[] = data || [];
-  const filteredMeds = medications.filter((med) => {
-    const matchSearch = med.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchKit = showOnlyKit ? myKit.includes(med.id) : true;
-    return matchSearch && matchKit;
-  });
+  // Filter/Sortข้อมูลยา
+  const filteredAndSortedMeds = useMemo(() => {
+    return medications
+      .filter((med: any) => {
+        // ค้นหาจากชื่อยาหลัก หรือ ชื่อสามัญทางยา
+        const matchesSearch = 
+          med.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          (med.genericName && med.genericName.toLowerCase().includes(searchTerm.toLowerCase()));
+        
+        // คัดกรองตามหมวดหมู่
+        const matchesCategory = selectedCategory === 'All' || med.category === selectedCategory;
+        
+        return matchesSearch && matchesCategory;
+      })
+      .sort((a: any, b: any) => {
+        // จัดเรียง A-Z หรือ Z-A
+        if (sortOrder === 'asc') {
+          return a.name.localeCompare(b.name);
+        } else {
+          return b.name.localeCompare(a.name);
+        }
+      });
+  }, [searchTerm, selectedCategory, sortOrder]);
 
   return (
-    <div className="max-w-6xl mx-auto space-y-6">
-  
-      <div className="flex flex-col sm:flex-row justify-between gap-4 items-center bg-base-100 p-4 rounded-xl shadow-sm border border-base-200">
-        <input
-          type="text"
-          placeholder="ค้นหาชื่อยา..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="input input-bordered w-full sm:flex-1"
-        />
-        <label className="flex items-center gap-3 cursor-pointer self-end sm:self-center">
-          <span className="font-medium text-base text-base-content/80 flex items-center gap-2">
-            เปิดดูกระเป๋ายา 
-            <span className="badge badge-primary badge-sm w-5">{myKit.length}</span>
-          </span>
+    <div className="container mx-auto px-4 py-8 w-full max-w-7xl">
+      <div className="flex flex-col md:flex-row gap-4 mb-8 bg-base-100 p-4 rounded-xl shadow-sm border border-base-200">
+        <div className="flex-1">
           <input
-            type="checkbox"
-            checked={showOnlyKit}
-            onChange={(e) => setShowOnlyKit(e.target.checked)}
-            className="toggle toggle-primary"
+            type="text"
+            placeholder="ค้นหาชื่อยา หรือ ชื่อสามัญ..."
+            className="input input-bordered w-full"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
-        </label>
+        </div>
+
+        <select
+          className="select select-bordered w-full md:w-1/4"
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+        >
+          {categories.map((cat: any) => (
+            <option key={cat} value={cat}>
+              {cat === 'All' ? 'ทุกหมวดหมู่' : cat}
+            </option>
+          ))}
+        </select>
+
+        <button
+          className="btn bg-base-100 border-base-300 text-base-content hover:bg-base-200 hover:border-base-content/50 w-full md:w-auto font-normal shadow-sm"
+          onClick={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1 text-base-content/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+          </svg>
+          {sortOrder === 'asc' ? 'A-Z' : 'Z-A'}
+        </button>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {filteredMeds.map((med) => {
-          const inKit = myKit.includes(med.id);
-          return (
-            <div
-              key={med.id}
-              className="card bg-base-100 shadow-md hover:shadow-xl transition-shadow border border-base-200 flex flex-col justify-between text-center"
-            >
-              <figure className="px-4 pt-4">
-                <img
-                  src={med.imageUrl}
-                  alt={med.name}
-                  className="rounded-lg h-36 w-full object-contain bg-base-200/50 p-2"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://placehold.co/400x300?text=No+Image';
-                  }}
-                />
-              </figure>
-              
-              <div className="card-body p-4 flex flex-col justify-between flex-1 items-center">
-                <div className="w-full space-y-1">
-                  <div className="badge badge-outline badge-sm mb-1">{med.category}</div>
-                  <h3 className="card-title text-lg text-primary justify-center">{med.name}</h3>
-                  <p className="text-xs text-base-content/80 line-clamp-2 min-h-[2rem]" title={med.use}>
-                    {med.use}
-                  </p>
-                </div>
-                
-                <div className="card-actions w-full justify-between items-center mt-4 pt-3 border-t border-base-200">
-                  <button
-                    onClick={() => toggleKit(med.id)}
-                    className={`btn btn-xs sm:btn-sm ${inKit ? 'btn-success text-white' : 'btn-outline'}`}
-                  >
-                    {inKit ? '✓ ในกระเป๋า' : '+ เพิ่มลงกระเป๋า'}
-                  </button>
-                  
-                  <Link to={`/medication/${med.id}`} className="text-xs sm:text-sm font-medium text-primary hover:underline">
-                    ดูข้อมูล →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-        
-        {filteredMeds.length === 0 && (
-          <div className="col-span-full py-12 text-center text-base-content/50">
-            ไม่พบข้อมูลยาที่คุณค้นหา
+        {filteredAndSortedMeds.length > 0 ? (
+          filteredAndSortedMeds.map((med: any) => (
+            <MedicationCard key={med.id} medication={med} />
+          ))
+        ) : (
+          <div className="col-span-full py-20 text-center text-base-content/50">
+            <p className="text-xl font-semibold">ไม่พบข้อมูลยา</p>
+            <p>ลองปรับคำค้นหาหรือเปลี่ยนหมวดหมู่ดูอีกครั้ง</p>
           </div>
         )}
       </div>
+
     </div>
   );
-};
+}
