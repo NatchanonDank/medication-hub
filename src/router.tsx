@@ -11,18 +11,35 @@ const MainLayout = () => {
 
   return (
     <div className="min-h-screen bg-base-200 font-sans">
-      <header className="navbar bg-base-100 shadow-sm px-6 sticky top-0 z-50">
+      <header className="navbar bg-base-100 shadow-sm px-4 sm:px-6 sticky top-0 z-50">
         <div className="flex-1">
-          <NavLink to="/" className="inline-flex items-center gap-2 text-2xl font-bold text-primary">
+          <NavLink to="/" className="inline-flex items-center gap-2 text-xl sm:text-2xl font-bold text-primary">
             <img src="/icon.png" alt="MedHub Logo" className="w-7 h-7 object-contain" />
             <span>MedHub</span>
           </NavLink>
         </div>
-        <div className="flex-none gap-2 hidden sm:flex">
+
+        {/* เมนูสำหรับหน้าจอขนาดใหญ่ (Desktop) */}
+        <div className="flex-none gap-1 hidden md:flex">
           <NavLink to="/" className={navClass}>หน้าหลัก</NavLink>
           <NavLink to="/checker" className={navClass}>เช็คปฏิกิริยายา</NavLink>
           <NavLink to="/my-kit" className={navClass}>กระเป๋ายา</NavLink>
           <NavLink to="/about" className={navClass}>เกี่ยวกับเรา</NavLink>
+        </div>
+
+        {/* เมนูแบบ Dropdown สำหรับมือถือ (Mobile Hamburger Menu) */}
+        <div className="flex-none md:hidden dropdown dropdown-end">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-square">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 border border-base-200">
+            <li><NavLink to="/">หน้าหลัก</NavLink></li>
+            <li><NavLink to="/checker">เช็คปฏิกิริยายา</NavLink></li>
+            <li><NavLink to="/my-kit">กระเป๋ายา</NavLink></li>
+            <li><NavLink to="/about">เกี่ยวกับเรา</NavLink></li>
+          </ul>
         </div>
       </header>
       
