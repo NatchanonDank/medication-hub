@@ -1,13 +1,13 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-// 1. กำหนด Type สำหรับ State และ Action
+// กำหนด Type สำหรับ State และ Action
 interface MedicationState {
   myKit: string[]; // เก็บเฉพาะ Array ของ ID ยา (Client State)
   toggleKit: (id: string) => void; // ฟังก์ชันสำหรับเพิ่มลบยาออกจากกระเป๋า
 }
 
-// 2. สร้าง Store ด้วย create() และห่อด้วย persist() เพื่อบันทึกลง LocalStorage
+// สร้าง Store ด้วย create() และห่อด้วย persist() เพื่อบันทึกลง LocalStorage
 export const useMedicationStore = create<MedicationState>()(
   persist(
     (set) => ({

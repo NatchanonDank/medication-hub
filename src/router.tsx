@@ -10,8 +10,8 @@ const MainLayout = () => {
     `btn btn-ghost ${isActive ? 'text-primary border-b-2 border-primary rounded-none' : ''}`;
 
   return (
-    <div className="min-h-screen bg-base-200 font-sans">
-      <header className="navbar bg-base-100 shadow-sm px-4 sm:px-6 sticky top-0 z-50">
+    <div className="min-h-screen bg-base-200 font-sans flex flex-col">
+      <header className="navbar bg-base-100 shadow-sm px-4 sm:px-6 lg:px-8 sticky top-0 z-50">
         <div className="flex-1">
           <NavLink to="/" className="inline-flex items-center gap-2 text-xl sm:text-2xl font-bold text-primary">
             <img src="/icon.png" alt="MedHub Logo" className="w-7 h-7 object-contain" />
@@ -41,9 +41,15 @@ const MainLayout = () => {
         </div>
       </header>
       
-      <main className="w-full py-8">
+      <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Outlet />
       </main>
+
+      <footer className="footer footer-center p-6 bg-base-100 text-base-content/70 border-t border-base-200 text-xs sm:text-sm mt-auto">
+        <div className="space-y-1">
+          <p>© 2026 MedHub. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 };

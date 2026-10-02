@@ -1,56 +1,38 @@
 import { Link } from 'react-router';
-import type { Medication } from '../types/medication';
 
-interface MedicationCardProps {
-  medication: Medication;
-}
-
-export default function MedicationCard({ medication }: MedicationCardProps) {
+const MedicationCard = ({ medication }: { medication: any }) => {
   return (
-    <div className="card bg-base-100 shadow-md hover:shadow-xl transition-shadow border border-base-200 p-6 flex flex-col h-full">
-      <figure className="h-40 mb-4 bg-transparent flex items-center justify-center">
+    <div className="card bg-base-100 shadow-sm border border-base-200 hover:shadow-md transition-all duration-200 h-full flex flex-col">
+      <figure className="px-4 pt-8 h-44 bg-transparent">
         <img 
           src={medication.imageUrl} 
           alt={medication.name} 
-          className="max-h-full max-w-full object-contain rounded-lg"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = `https://placehold.co/200x150?text=No+Image`;
-          }}
+          className="h-full object-contain drop-shadow-md" 
         />
       </figure>
-      <div className="flex flex-col flex-grow text-center">
-        <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+      <div className="card-body p-5 flex flex-col flex-1 text-center items-center">      
+        <div className="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-wider mb-1">
           {medication.category}
-        </span>
-        <h2 className="text-lg font-bold mt-1 text-base-content">
+        </div>
+        <h2 className="card-title text-lg font-bold text-base-content leading-tight justify-center w-full">
           {medication.name}
         </h2>
-        <p className="text-xs text-base-content/70 mt-1 line-clamp-2">
-          {medication.use}
-        </p>
-        <div className="flex flex-wrap gap-2 mt-4 justify-center items-center w-full">
-          {medication.badges?.map((badge: string, index: number) => {
-            const isDanger = badge.includes("อันตราย") || badge.includes("ห้าม") || badge.includes("ระวัง");
-            const isRx = badge === "Rx";
-            const badgeColor = isDanger ? "badge-error text-white border-none" : isRx ? "badge-warning text-white border-none" : "badge-info text-white border-none";
-
-            return (
-              <span key={index} className={`badge badge-sm py-2 px-2 font-medium shadow-sm ${badgeColor}`}>
-                {badge}
-              </span>
-            );
-          })}
+        <div className="flex-1"></div>
+        <div className="flex flex-col gap-1 mt-3 w-full">
+          {medication.indications?.slice(0, 2).map((ind: string, idx: number) => (
+            <span key={idx} className="text-xs text-base-content/70 truncate w-full px-2">
+              {ind}
+            </span>
+          ))}
         </div>
-      </div>
-
-      <div className="mt-auto pt-4 border-t border-base-200/50 text-center">
-        <Link 
-          to={`/medication/${medication.id}`} 
-          className="text-primary hover:text-primary-focus text-sm font-semibold inline-flex items-center gap-1"
-        >
-          ดูข้อมูล &rarr;
-        </Link>
+        <div className="card-actions justify-center mt-5 w-full">
+          <Link to={`/medication/${medication.id}`} className="btn btn-primary btn-sm w-full font-medium">
+            ดูข้อมูล
+          </Link>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default MedicationCard;

@@ -1,8 +1,9 @@
+import { useState, useEffect } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import type { Medication } from '../types/medication';
 import mockData from '../data/mock-medications.json';
 
-// จำลองการดึงข้อมูลจาก API (หน่วงเวลา 800ms เพื่อให้โชว์ Loading Skeleton)
+// จำลองการดึงข้อมูลจาก API
 const fetchMedications = async (): Promise<Medication[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -11,7 +12,7 @@ const fetchMedications = async (): Promise<Medication[]> => {
   });
 };
 
-// 1. Hook สำหรับดึงข้อมูลยาทั้งหมด (ใช้ที่หน้าหลัก)
+// Hook สำหรับดึงข้อมูลยาทั้งหมด
 export const useMedications = () => {
   return useQuery({
     queryKey: ['medications'],
@@ -20,7 +21,7 @@ export const useMedications = () => {
   });
 };
 
-// 2. Hook สำหรับดึงข้อมูลยารายตัว
+// Hook สำหรับดึงข้อมูลยารายตัว
 export const useMedicationDetail = (id: string | undefined) => {
   const queryClient = useQueryClient();
 
@@ -39,11 +40,58 @@ export const useMedicationDetail = (id: string | undefined) => {
       });
     },
     initialData: () => {
-      // ดึงข้อมูลจากแคช medications มาแสดงทันทีระหว่างรอโหลด Stale-While-Revalidate
+      // ดึงข้อมูลจากแคช medications มาแสดงทันทีระหว่างรอโหลด
       const allMeds = queryClient.getQueryData<Medication[]>(['medications']);
       return allMeds?.find((m) => String(m.id) === String(id));
     },
     enabled: !!id, // จะทำงานก็ต่อเมื่อมี id ส่งเข้ามาเท่านั้น
     staleTime: 1000 * 60 * 10, // แคชหน้ารายละเอียดไว้ 10 นาที
   });
+};
+
+// Hook สำหรับจัดการกระเป๋ายาด้วย LocalStorage
+export const useMyKit = () => {
+  const [myKit, setMyKit] = useState<Medication[]>([]);
+
+  // โหลดข้อมูลกระเป๋ายาจาก localStorage
+  useEffect(() => {
+    const savedKit = localStorage.getItem('myMedKit');
+    if (savedKit) {
+      try {
+        setMyKit(JSON.parse(savedKit));
+      } catch (error) {
+        console.error('Failed to parse myMedKit', error);
+      }
+    }
+  }, []);
+
+  const isInKit = (id: string) => {
+    return myKit.some((med) => String(med.id) === String(id));
+  };
+
+  // ฟังก์ชันเพิ่ม/ลบ ยาออกจากกระเป๋า
+  const toggleMyKit = (medication: Medication) => {
+    let updatedKit;
+    
+    if (isInKit(String(medication.id))) {
+      updatedKit = myKit.filter((med) => String(med.id) !== String(medication.id));
+    } else {
+      updatedKit = [...myKit, medication];
+    }
+
+    setMyKit(updatedKit);
+    localStorage.setItem('myMedKit', JSON.stringify(updatedKit));
+  };
+
+  const clearMyKit = () => {
+    setMyKit([]);
+    localStorage.removeItem('myMedKit');
+  };
+
+  return {
+    myKit,
+    isInKit,
+    toggleMyKit,
+    clearMyKit
+  };
 };
