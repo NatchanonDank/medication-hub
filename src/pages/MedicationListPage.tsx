@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import medications from '../data/mock-medications.json';
 import MedicationCard from '../components/MedicationCard.tsx';
 
